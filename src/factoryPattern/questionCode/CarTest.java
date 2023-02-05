@@ -1,5 +1,7 @@
 package factoryPattern.questionCode;
 
+//다음 코드를 상속과 Factory pattern 을 이용하여 리펙토링 하세요
+
 public class CarTest {
 
 	public static void main(String[] args) {
