@@ -1,4 +1,4 @@
-package factoryPattern.questionCode;
+package factoryMethodPattern.questionCode;
 
 public class Car {
 	public static final String SONATA = "Sonata";

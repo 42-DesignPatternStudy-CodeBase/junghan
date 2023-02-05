@@ -1,4 +1,4 @@
-package factoryPattern.questionCode;
+package factoryMethodPattern.questionCode;
 
 //다음 코드를 상속과 Factory pattern 을 이용하여 리펙토링 하세요
 
