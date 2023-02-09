@@ -2,11 +2,7 @@ package factoryMethodPattern;
 
 public class Genesis implements Car {
 	
-	String productName = "noname";
-	
-	public Genesis(String productName) {
-		this.productName = productName;
-	}
+	private static String productName = "Genesis";
 	
 	@Override
 	public String toString() {

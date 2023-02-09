@@ -2,11 +2,7 @@ package factoryMethodPattern;
 
 public class Grandeur implements Car {
 	
-	String productName = "noname";
-	
-	public Grandeur(String productName) {
-		this.productName = productName;
-	}
+	private static String productName = "Grandeur";
 	
 	@Override
 	public String toString() {

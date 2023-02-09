@@ -1,6 +1,6 @@
 package decoratorPattern;
 
-public class Decorator implements Coffee {
+public abstract class Decorator implements Coffee {
 	private Coffee coffee;
 	
 	public Decorator(Coffee coffee) {
