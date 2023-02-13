@@ -9,11 +9,11 @@ public class CarTest {
 		Car genesis = fac1.produceCar();
 		System.out.println(genesis);
 		
-		CarFactory fac2 = new GenesisFactory();
+		CarFactory fac2 = new GrandeurFactory();
 		Car grandeur = fac2.produceCar();
 		System.out.println(grandeur);
 		
-		CarFactory fac3 = new GenesisFactory();
+		CarFactory fac3 = new SonataFactory();
 		Car sonata = fac3.produceCar();
 		
 		System.out.println(sonata);
