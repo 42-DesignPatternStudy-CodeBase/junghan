@@ -16,4 +16,5 @@ public abstract class PlayerLevel {
 	protected void go(int num) {;
 		System.out.println(level + "가즈아");
 	}
+	protected abstract int getlevel();
 }

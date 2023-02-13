@@ -5,6 +5,10 @@ public class AdvancedLevel extends PlayerLevel {
 	AdvancedLevel() {
 		this.level = ADVANCED_LEVEL;
 	}
+	
+	public int getlevel() {
+		return this.level;
+	}
 
 	@Override
 	public void run() {

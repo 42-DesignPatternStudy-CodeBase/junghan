@@ -5,6 +5,10 @@ public class BeginnerLevel extends PlayerLevel {
 	BeginnerLevel() {
 		this.level = BEGINNER_LEVEL;
 	}
+	
+	public int getlevel() {
+		return this.level;
+	}
 
 	@Override
 	public void run() {

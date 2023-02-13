@@ -5,6 +5,10 @@ public class SuperLevel extends PlayerLevel{
 	SuperLevel() {
 		this.level = SUPER_LEVEL;
 	}
+	
+	public int getlevel() {
+		return this.level;
+	}
 
 	@Override
 	public void run() {
