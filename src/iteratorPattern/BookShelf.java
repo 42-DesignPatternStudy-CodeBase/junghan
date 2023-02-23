@@ -19,14 +19,14 @@ public class BookShelf implements Aggregate {
 		// TODO Auto-generated method stub
 		
 //		return new BookShelfIterator(this);
-		return new IteratorFactory().createProduct(this, 0);
+		return new IteratorFactory().create(this, 0);
 	}
 	
 	public Iterator reverseIterator() {
 		// TODO Auto-generated method stub
 		
 //		return new BookShelfReverseIterator(this);
-		return new IteratorFactory().createProduct(this, 1);
+		return new IteratorFactory().create(this, 1);
 	}
 	
 	public void appendBook(Book newBook) {

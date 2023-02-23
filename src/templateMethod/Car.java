@@ -1,15 +1,19 @@
 package templateMethod;
 
 public abstract class Car {
-	abstract public void startCar();
+	final void startCar(){
+        System.out.println("시동을 켭니다.");
+    };
 	abstract public void drive();
 	abstract public void stop();
-	abstract public void turnOff();
+	final void turnOff(){
+        System.out.println("시동을 끕니다.");
+    };
 
 	final void run() { //override 불
 		startCar();
 		drive();
-		turnOff();
 		stop();
+		turnOff();
 	};
 }
