@@ -10,7 +10,7 @@ public abstract class Car {
         System.out.println("시동을 끕니다.");
     };
 
-	final void run() { //override 불
+	final void run() { //override 불가 
 		startCar();
 		drive();
 		stop();
