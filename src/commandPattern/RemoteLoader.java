@@ -1,5 +1,8 @@
 package commandPattern;
 
+import commandPattern.command.*;
+import commandPattern.receiver.*;
+
 public class RemoteLoader {
 
 	public static void main(String[] args) {
@@ -33,8 +36,8 @@ public class RemoteLoader {
         remoteControl.offButtonWasPushed(2);
         remoteControl.onButtonWasPushed(3);
         remoteControl.offButtonWasPushed(3);
-        remoteControl.onButtonWasPushed(4);
-        remoteControl.offButtonWasPushed(4);
+//        remoteControl.onButtonWasPushed(4);
+//        remoteControl.offButtonWasPushed(4);
 	}
 
 }

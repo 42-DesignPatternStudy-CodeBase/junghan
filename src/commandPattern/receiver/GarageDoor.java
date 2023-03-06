@@ -1,4 +1,4 @@
-package commandPattern;
+package commandPattern.receiver;
 
 public class GarageDoor {
     String location;
