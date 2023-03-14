@@ -1,5 +1,13 @@
 package mediatorPattern;
 
+import java.awt.CheckboxGroup;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.Label;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 public class LoginFrame extends Frame implements ActionListener, Mediator {
     private ColleagueCheckbox checkGuest;
     private ColleagueCheckbox checkLogin;
@@ -12,20 +20,33 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
     // Colleague들을 생성해서 배치한 후에 표시를 실행한다.
     public LoginFrame(String title) {
         super(title);
+        //**1-1**
+        //도화지깔기 
         setBackground(Color.lightGray);
         // 레이아웃 매니저를 사용해서 4*2의 그리드를 만든다. 
         setLayout(new GridLayout(4, 2));
+        
+        //**1-2**
         // Colleague들의 생성
         createColleagues();
+        
+        //**1-3**
         // 배치
+        //check box
         add(checkGuest);
         add(checkLogin);
+        
+        // textbox
         add(new Label("Username:"));
         add(textUser);
         add(new Label("Password:"));
         add(textPass);
+        
+        // button
         add(buttonOk);
         add(buttonCancel);
+        
+        //**1-4**
         // 유효/무효의 초기지정 
         colleagueChanged(checkGuest);
         // 표시
@@ -35,7 +56,8 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
 
     // Colleague들을 생성한다.
     public void createColleagues() {
-        // 생성
+    	//**2-1**
+        //객체 생성
         CheckboxGroup g = new CheckboxGroup();
         checkGuest = new ColleagueCheckbox("Guest", g, true);
         checkLogin = new ColleagueCheckbox("Login", g, false);
@@ -45,7 +67,8 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
         buttonOk = new ColleagueButton("OK");
         buttonCancel = new ColleagueButton("Cancel"); 
         
-        // Mediator의 세트 
+        //**2-2**
+        // Mediator의 셋팅 
         checkGuest.setMediator(this);
         checkLogin.setMediator(this); 
         textUser.setMediator(this);
@@ -53,6 +76,7 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
         buttonOk.setMediator(this);
         buttonCancel.setMediator(this);
 
+        //**2-3**
         // Listener의 세트 
         checkGuest.addItemListener(checkGuest);
         checkLogin.addItemListener(checkLogin); 
